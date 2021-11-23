@@ -1,38 +1,87 @@
-.App {
-  text-align: center;
+*{
+  margin: 0px;
+  padding: 0px;
+  font-family: monospace;
+  scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html::-webkit-scrollbar{
+  display: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html{
+ width:100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+:root{
+ --celeste:#82D0D9;
+}
+
+.app{
+  animation:fadeAppear 1s;
+  background-color:black;
+  height:70rem;
+  overflow: scroll;
+}
+.noScoll{
+
+}
+.noScroll::-webkit-scrollbar{
+  visibility: hidden;
+}
+
+.noScroll::-webkit-scrollbar-button{
+  display: none;
+}
+
+
+
+
+
+
+
+.footerClass{
+  color:white;
+}
+
+.footerClass a{
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.inactive{
+  opacity: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+@keyframes rightAppear {
+  from{margin-left: 100%;}
+  to{margin-left: 0%;}
 }
+
+@keyframes leftAppear {
+  from{margin-left: -100%; opacity:0;}
+  to{margin-left: 0%; opacity:1;}
+}
+
+@keyframes upAppear {
+  from{margin-top: -100%;}
+  to{margin-top: 0%;}
+}
+
+@keyframes downAppear {
+  from{margin-top: 100%;}
+  to{margin-top: 0%;}
+}
+
+@keyframes fadeAppear {
+  from{opacity:0}
+  to{opacity:1}
+}
+
+@keyframes fadeOut{
+  from{opacity:1}
+  to{opacity:0}
+}
+
+
+

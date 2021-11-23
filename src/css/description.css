@@ -1,0 +1,126 @@
+.descriptionSection{
+    height:70rem;
+    background-size:200%;
+    padding-top:10rem;
+    animation-name:fadeDescBackground;
+}
+
+.descriptionSection h2{
+    color:white;
+}
+
+.h2Div{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.h2Div h2{
+    box-shadow: 0px 0px 40px white;
+    animation-name:fadeOut;
+    opacity: 0;
+}
+
+.aboutDiv{
+    display: grid;
+    justify-items: center;
+    margin-top:2vw;
+    animation-name:fadeOut;
+    opacity:0;
+}
+
+.aboutDiv div{
+    background-color: #0D1526;
+    width:50%;
+    height:34vw;
+    text-align: center;
+    padding:3vw;
+    border-radius:10px;
+    color:white;
+    text-shadow: 1px 1px 1px black;
+    box-shadow: 0px 0px 20px white;
+}
+
+.aboutDiv h3{
+    font-size:3vw;
+}
+
+.aboutDiv article{
+    font-size:2.5vw;
+    display: flex;
+    align-items: center;
+    height:100%;
+}
+
+
+.ast{
+    width:50vw;
+    height:50vw;
+    position: fixed;
+    background-image: url(../img/blueComet.png);
+    background-size:90% 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: rotate(-130deg);
+    margin-left: -100%;
+    animation-fill-mode: forwards;
+    animation-name:astBack;
+}
+
+
+@keyframes fadeDescBackground{
+    from{
+        background-image:url(../img/headerBg.png);
+        box-shadow:0px 0px 50px white;
+    }
+    to{
+        background-image:url(../img/black.png);
+        box-shadow:0px 0px 0px white;
+
+    }
+  }
+
+  @keyframes appearDescBackground{
+    from{
+        background-image:url(../img/black.png);
+        box-shadow:0px 0px 0px white;
+    }
+    to{
+        background-image:url(../img/headerBg.png);
+        box-shadow:0px 0px 50px white;
+    }
+  }
+
+@keyframes h2Appear {
+    from{
+        opacity:0;
+        box-shadow: 0px 0px 0px black;
+    }
+    to{
+        box-shadow: 0px 0px 40px white;
+        opacity:1;
+    }
+}
+
+@keyframes astRain {
+    from{
+        margin-left:-100%;
+    }
+
+    to{
+        margin-left:200%;
+    }
+}
+
+@keyframes astBack {
+    from{
+        margin-left:200%;
+        transform: rotate(50deg);
+    }
+
+    to{
+        margin-left:-100%;
+        transform: rotate(50deg);
+    }
+}
+
